@@ -1,0 +1,14 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr path="/api/package[@name='com.gc.materialdesign']" name="managedName">NativeCode.Bindings.MaterialDesign</attr>
+  <attr path="/api/package[@name='com.gc.materialdesign.utils']" name="managedName">NativeCode.Bindings.MaterialDesign.Utils</attr>
+  <attr path="/api/package[@name='com.gc.materialdesign.views']" name="managedName">NativeCode.Bindings.MaterialDesign.Views</attr>
+  <attr path="/api/package[@name='com.gc.materialdesign.widgets']" name="managedName">NativeCode.Bindings.MaterialDesign.Widgets</attr>
+  <attr path="/api/package[@name='com.gc.materialdesign.utils.utils']" name="managedName">NativeCode.Bindings.MaterialDesign.Utils.Util</attr>
+</metadata>

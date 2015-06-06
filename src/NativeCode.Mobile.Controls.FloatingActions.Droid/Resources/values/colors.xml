@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+  <color name="fab_normal">#8DC63F</color>
+  <color name="fab_pressed">#79A838</color>
+</resources>
