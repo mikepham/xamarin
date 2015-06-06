@@ -35,10 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CheckBox.cs" />
     <Compile Include="Dialogs\DialogDuration.cs" />
     <Compile Include="Dialogs\DialogProviderException.cs" />
     <Compile Include="Dialogs\IDialogHandle.cs" />
     <Compile Include="Dialogs\IDialogProvider.cs" />
+    <Compile Include="FlatButton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
