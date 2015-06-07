@@ -9,7 +9,7 @@
       <Label Text="Switch on/off" />
       <Switch />
     </StackLayout>
-    <materialDesign:FlatButton Text="Hit me!" />
+    <materialDesign:FlatButton Text="Hit me!" Command="{Binding ShowSnackBar}" />
     <Button Text="Hit me twice!" />
   </StackLayout>
 </ContentPage>

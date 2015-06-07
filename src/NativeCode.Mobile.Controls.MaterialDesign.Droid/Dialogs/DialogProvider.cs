@@ -1,3 +1,9 @@
+using NativeCode.Mobile.Controls.MaterialDesign.Droid.Dialogs;
+
+using Xamarin.Forms;
+
+[assembly: Dependency(typeof(DialogProvider))]
+
 namespace NativeCode.Mobile.Controls.MaterialDesign.Droid.Dialogs
 {
     using System;

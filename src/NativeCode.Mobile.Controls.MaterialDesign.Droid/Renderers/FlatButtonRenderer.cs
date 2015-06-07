@@ -21,6 +21,7 @@ namespace NativeCode.Mobile.Controls.MaterialDesign.Droid.Renderers
             if (this.Control == null)
             {
                 this.SetNativeControl(this.InflateNativeControl(Resource.Layout.flatbutton_view));
+                this.SetupClickable(this.Control, this.Element.Command, this.Element.CommandParameter);
                 this.Control.Text = this.Element.Text ?? string.Empty;
             }
         }
