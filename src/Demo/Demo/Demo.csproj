@@ -84,16 +84,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NativeCode.Mobile.Controls.FloatingActions\NativeCode.Mobile.Controls.FloatingActions.csproj">
-      <Project>{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}</Project>
-      <Name>NativeCode.Mobile.Controls.FloatingActions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\NativeCode.Mobile.Controls.MaterialDesign\NativeCode.Mobile.Controls.MaterialDesign.csproj">
-      <Project>{32650391-4B0A-4D40-A47D-F32F13ED2CAC}</Project>
-      <Name>NativeCode.Mobile.Controls.MaterialDesign</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Views\MenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>

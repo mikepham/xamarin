@@ -1,23 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{492611C1-B786-400E-8BA0-C17C694C9E92}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Bindings.FloatingActions", "Bindings\NativeCode.Bindings.FloatingActions\NativeCode.Bindings.FloatingActions.csproj", "{D4F27935-A3C2-45D7-9EC0-0F91A1775FA4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Bindings.MaterialDesign", "Bindings\NativeCode.Bindings.MaterialDesign\NativeCode.Bindings.MaterialDesign.csproj", "{120A603F-5625-4023-A34C-694242A28996}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.Controls.FloatingActions", "NativeCode.Mobile.Controls.FloatingActions\NativeCode.Mobile.Controls.FloatingActions.csproj", "{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.Controls.FloatingActions.Droid", "NativeCode.Mobile.Controls.FloatingActions.Droid\NativeCode.Mobile.Controls.FloatingActions.Droid.csproj", "{7BA61C2C-5FD7-4980-873D-1B73FD411E61}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.Common.Droid", "NativeCode.Mobile.Common.Droid\NativeCode.Mobile.Common.Droid.csproj", "{09452688-B99E-4C70-B6B2-86077A663F64}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.Controls.MaterialDesign", "NativeCode.Mobile.Controls.MaterialDesign\NativeCode.Mobile.Controls.MaterialDesign.csproj", "{32650391-4B0A-4D40-A47D-F32F13ED2CAC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.Controls.MaterialDesign.Droid", "NativeCode.Mobile.Controls.MaterialDesign.Droid\NativeCode.Mobile.Controls.MaterialDesign.Droid.csproj", "{DADF8760-2318-4E8B-BA9B-D3020EC952EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}"
 EndProject
@@ -35,48 +21,22 @@ Global
 		{09452688-B99E-4C70-B6B2-86077A663F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09452688-B99E-4C70-B6B2-86077A663F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09452688-B99E-4C70-B6B2-86077A663F64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{120A603F-5625-4023-A34C-694242A28996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{120A603F-5625-4023-A34C-694242A28996}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{120A603F-5625-4023-A34C-694242A28996}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{120A603F-5625-4023-A34C-694242A28996}.Release|Any CPU.Build.0 = Release|Any CPU
-		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32650391-4B0A-4D40-A47D-F32F13ED2CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32650391-4B0A-4D40-A47D-F32F13ED2CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32650391-4B0A-4D40-A47D-F32F13ED2CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32650391-4B0A-4D40-A47D-F32F13ED2CAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BA61C2C-5FD7-4980-873D-1B73FD411E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BA61C2C-5FD7-4980-873D-1B73FD411E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BA61C2C-5FD7-4980-873D-1B73FD411E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BA61C2C-5FD7-4980-873D-1B73FD411E61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{D4F27935-A3C2-45D7-9EC0-0F91A1775FA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4F27935-A3C2-45D7-9EC0-0F91A1775FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4F27935-A3C2-45D7-9EC0-0F91A1775FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4F27935-A3C2-45D7-9EC0-0F91A1775FA4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DADF8760-2318-4E8B-BA9B-D3020EC952EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DADF8760-2318-4E8B-BA9B-D3020EC952EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DADF8760-2318-4E8B-BA9B-D3020EC952EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DADF8760-2318-4E8B-BA9B-D3020EC952EE}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D4F27935-A3C2-45D7-9EC0-0F91A1775FA4} = {492611C1-B786-400E-8BA0-C17C694C9E92}
-		{120A603F-5625-4023-A34C-694242A28996} = {492611C1-B786-400E-8BA0-C17C694C9E92}
-		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108} = {8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}
-		{217137FB-C264-4C05-92BA-191FBB8CD9C3} = {8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108} = {8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3} = {8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}
 	EndGlobalSection
 EndGlobal

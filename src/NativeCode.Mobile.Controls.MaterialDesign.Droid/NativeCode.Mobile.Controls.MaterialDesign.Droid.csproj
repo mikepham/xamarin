@@ -79,10 +79,6 @@
       <Project>{09452688-B99E-4C70-B6B2-86077A663F64}</Project>
       <Name>NativeCode.Mobile.Common.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NativeCode.Mobile.Controls.MaterialDesign\NativeCode.Mobile.Controls.MaterialDesign.csproj">
-      <Project>{32650391-4B0A-4D40-A47D-F32F13ED2CAC}</Project>
-      <Name>NativeCode.Mobile.Controls.MaterialDesign</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

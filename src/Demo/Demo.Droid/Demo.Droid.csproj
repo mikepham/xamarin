@@ -88,14 +88,6 @@
       <Project>{09452688-B99E-4C70-B6B2-86077A663F64}</Project>
       <Name>NativeCode.Mobile.Common.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\NativeCode.Mobile.Controls.FloatingActions.Droid\NativeCode.Mobile.Controls.FloatingActions.Droid.csproj">
-      <Project>{7BA61C2C-5FD7-4980-873D-1B73FD411E61}</Project>
-      <Name>NativeCode.Mobile.Controls.FloatingActions.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\NativeCode.Mobile.Controls.MaterialDesign.Droid\NativeCode.Mobile.Controls.MaterialDesign.Droid.csproj">
-      <Project>{DADF8760-2318-4E8B-BA9B-D3020EC952EE}</Project>
-      <Name>NativeCode.Mobile.Controls.MaterialDesign.Droid</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Demo\Demo.csproj">
       <Project>{217137FB-C264-4C05-92BA-191FBB8CD9C3}</Project>
       <Name>Demo</Name>

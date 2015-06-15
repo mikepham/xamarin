@@ -77,10 +77,6 @@
       <Project>{09452688-B99E-4C70-B6B2-86077A663F64}</Project>
       <Name>NativeCode.Mobile.Common.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NativeCode.Mobile.Controls.FloatingActions\NativeCode.Mobile.Controls.FloatingActions.csproj">
-      <Project>{28AF18C2-86C6-485C-BC7E-DD4309C75C0F}</Project>
-      <Name>NativeCode.Mobile.Controls.FloatingActions</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\fab_bg_mini.png" />
