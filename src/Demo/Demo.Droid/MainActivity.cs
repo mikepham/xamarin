@@ -1,21 +1,24 @@
 ﻿namespace Demo.Droid
 {
-    using Android.App;
-    using Android.OS;
+	using Android.App;
+	using Android.OS;
 
-    using Xamarin.Forms;
-    using Xamarin.Forms.Platform.Android;
+	using NativeCode.Mobile.Common.Droid.FormsAppCompat;
 
-    [Activity(MainLauncher = true)]
-    public class MainActivity : FormsApplicationActivity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
+	using Xamarin.Forms;
 
-            Forms.Init(this, bundle);
+	[Activity(MainLauncher = true, Theme = AppTheme)]
+	public class MainActivity : AppCompatFormsApplicationActivity
+	{
+		private const string AppTheme = "@style/AppTheme";
 
-            this.LoadApplication(new App());
-        }
-    }
+		protected override void OnCreate(Bundle savedInstanceState)
+		{
+			base.OnCreate(savedInstanceState);
+
+			Forms.Init(this, savedInstanceState);
+
+			this.LoadApplication(new App());
+		}
+	}
 }
