@@ -1,6 +1,5 @@
 # xamarin
-Provides various libraries for making Xamarin.Forms development easier.
-
+Provides various libraries for making Xamarin.Forms development easier. Check out the [wiki](https://github.com/mikepham/xamarin/wiki) for more information.
 
 ## AppCompat
 Simply install the NuGet package into your Android project.
