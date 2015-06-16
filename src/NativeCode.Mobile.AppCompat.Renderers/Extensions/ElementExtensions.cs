@@ -1,10 +1,13 @@
-namespace NativeCode.Mobile.Common.Droid.Extensions
+namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
 {
     using System;
     using System.Linq;
 
     using Xamarin.Forms;
 
+    /// <summary>
+    /// Provides extensions for <see cref="Element" /> instances.
+    /// </summary>
     public static class ElementExtensions
     {
         private const string ButtonController = "IButtonController";

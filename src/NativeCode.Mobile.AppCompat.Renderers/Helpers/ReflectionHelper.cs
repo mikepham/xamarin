@@ -1,9 +1,9 @@
-namespace NativeCode.Mobile.Common.Droid.Helpers
+namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
 {
     using System;
     using System.Reflection;
 
-    public static class ReflectionHelper
+    internal static class ReflectionHelper
     {
         public static void SetFieldValue(object instance, string name, object value)
         {

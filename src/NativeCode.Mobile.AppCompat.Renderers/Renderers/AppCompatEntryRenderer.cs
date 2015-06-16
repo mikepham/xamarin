@@ -1,10 +1,10 @@
-using NativeCode.Mobile.Common.Droid.Renderers;
+using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(Entry), typeof(AppCompatEntryRenderer))]
 
-namespace NativeCode.Mobile.Common.Droid.Renderers
+namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System.ComponentModel;
 
@@ -17,9 +17,9 @@ namespace NativeCode.Mobile.Common.Droid.Renderers
     using Java.Lang;
 
     using NativeCode.Mobile.AppCompat.Extensions;
-    using NativeCode.Mobile.Common.Droid.Extensions;
-    using NativeCode.Mobile.Common.Droid.Helpers;
-    using NativeCode.Mobile.Common.Droid.Renderers.Controls;
+    using NativeCode.Mobile.AppCompat.Renderers.Extensions;
+    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
+    using NativeCode.Mobile.AppCompat.Renderers.Renderers.Controls;
 
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;

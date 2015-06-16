@@ -1,10 +1,10 @@
-using NativeCode.Mobile.Common.Droid.Renderers;
+using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(Switch), typeof(AppCompatSwitchRenderer))]
 
-namespace NativeCode.Mobile.Common.Droid.Renderers
+namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System;
 
@@ -13,7 +13,6 @@ namespace NativeCode.Mobile.Common.Droid.Renderers
     using Android.Widget;
 
     using NativeCode.Mobile.AppCompat.Extensions;
-    using NativeCode.Mobile.Common.Droid.Extensions;
 
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
