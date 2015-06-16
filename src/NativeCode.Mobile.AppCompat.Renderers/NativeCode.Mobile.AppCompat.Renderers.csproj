@@ -85,6 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LICENSE" />
     <None Include="NativeCode.Mobile.AppCompat.Renderers.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
