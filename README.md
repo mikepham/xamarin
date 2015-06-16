@@ -1,6 +1,14 @@
 # xamarin
 Provides various libraries for making Xamarin.Forms development easier. Check out the [wiki](https://github.com/mikepham/xamarin/wiki) for more information.
 
+Release: <a href="http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_continuous&guest=1">
+<img src="http://nativecode.no-ip.org:90/app/rest/builds/buildType:(id:xamarin_continuous)/statusIcon"/>
+</a>
+
+Continuous: <a href="http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1">
+<img src="http://nativecode.no-ip.org:90/app/rest/builds/buildType:(id:xamarin_release)/statusIcon"/>
+</a>
+
 ## AppCompat
 Simply install the NuGet package into your Android project.
 
