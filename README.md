@@ -25,6 +25,8 @@ public class MainActivity : AppCompatFormsApplicationActivity
 }
 ```
 
+!screenshot](screenshots/screenshot.png)
+
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
 
 ## AppCompat Renderers
