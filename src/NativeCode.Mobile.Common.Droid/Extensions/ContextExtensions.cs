@@ -1,11 +1,11 @@
-namespace NativeCode.Mobile.Common.Droid.Extensions
+namespace NativeCode.Mobile.AppCompat.Extensions
 {
     using System;
 
     using Android.Content;
     using Android.Support.V7.App;
 
-    using NativeCode.Mobile.Common.Droid.FormsAppCompat;
+    using NativeCode.Mobile.AppCompat.FormsAppCompat;
 
     public static class ContextExtensions
     {

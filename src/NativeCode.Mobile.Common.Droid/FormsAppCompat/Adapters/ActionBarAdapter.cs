@@ -1,6 +1,6 @@
 #pragma warning disable 0809
 
-namespace NativeCode.Mobile.Common.Droid.FormsAppCompat.Adapters
+namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.Common.Droid
+namespace NativeCode.Mobile.AppCompat
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace NativeCode.Mobile.Common.Droid
     using Android.App;
     using Android.Views;
 
-    using NativeCode.Mobile.Common.Droid.EventListeners;
+    using NativeCode.Mobile.AppCompat.EventListeners;
 
     using Xamarin.Forms.Platform.Android;
 

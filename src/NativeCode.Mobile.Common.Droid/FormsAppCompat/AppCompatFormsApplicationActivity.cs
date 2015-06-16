@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.Common.Droid.FormsAppCompat
+namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 {
     using Android.Content.Res;
     using Android.Graphics;
@@ -8,7 +8,7 @@ namespace NativeCode.Mobile.Common.Droid.FormsAppCompat
 
     using Java.Lang;
 
-    using NativeCode.Mobile.Common.Droid.FormsAppCompat.Adapters;
+    using NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters;
 
     using Xamarin.Forms.Platform.Android;
 

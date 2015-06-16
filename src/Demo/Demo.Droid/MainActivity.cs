@@ -3,7 +3,7 @@
     using Android.App;
     using Android.OS;
 
-    using NativeCode.Mobile.Common.Droid.FormsAppCompat;
+    using NativeCode.Mobile.AppCompat.FormsAppCompat;
 
     using Xamarin.Forms;
 

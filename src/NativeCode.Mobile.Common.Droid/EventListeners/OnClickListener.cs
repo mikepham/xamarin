@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.Common.Droid.EventListeners
+namespace NativeCode.Mobile.AppCompat.EventListeners
 {
     using System;
 

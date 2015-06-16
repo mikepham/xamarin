@@ -1,11 +1,11 @@
-namespace NativeCode.Mobile.Common.Droid.Extensions
+namespace NativeCode.Mobile.AppCompat.Extensions
 {
     using System;
 
     using Android.Content;
     using Android.Graphics;
 
-    using NativeCode.Mobile.Common.Droid.Fonts;
+    using NativeCode.Mobile.AppCompat.Fonts;
 
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;

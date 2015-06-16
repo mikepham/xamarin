@@ -1,4 +1,4 @@
-﻿namespace NativeCode.Mobile.Common.Droid.FormsAppCompat
+﻿namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 {
     using Android.Support.V7.App;
 

@@ -84,9 +84,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NativeCode.Mobile.Common.Droid\NativeCode.Mobile.Common.Droid.csproj">
+    <ProjectReference Include="..\..\NativeCode.Mobile.Common.Droid\NativeCode.Mobile.AppCompat.csproj">
       <Project>{09452688-B99E-4C70-B6B2-86077A663F64}</Project>
-      <Name>NativeCode.Mobile.Common.Droid</Name>
+      <Name>NativeCode.Mobile.AppCompat</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demo\Demo.csproj">
       <Project>{217137FB-C264-4C05-92BA-191FBB8CD9C3}</Project>

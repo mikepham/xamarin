@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.Common.Droid.Extensions
+namespace NativeCode.Mobile.AppCompat.Extensions
 {
     using System;
     using System.Threading.Tasks;

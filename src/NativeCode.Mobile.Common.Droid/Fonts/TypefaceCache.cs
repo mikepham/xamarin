@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.Common.Droid.Fonts
+namespace NativeCode.Mobile.AppCompat.Fonts
 {
     using System.Collections.Generic;
 
