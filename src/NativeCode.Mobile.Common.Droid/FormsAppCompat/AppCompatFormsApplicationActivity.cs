@@ -141,6 +141,12 @@ namespace NativeCode.Mobile.Common.Droid.FormsAppCompat
             this.AppCompatDelegate.OnPostResume();
         }
 
+        protected override void OnStop()
+        {
+            base.OnStop();
+            this.AppCompatDelegate.OnStop();
+        }
+
         protected override void OnTitleChanged(ICharSequence title, Color color)
         {
             base.OnTitleChanged(title, color);

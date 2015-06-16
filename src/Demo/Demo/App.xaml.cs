@@ -15,7 +15,13 @@
         public static void ChangeDetailPage(Page page)
         {
             var master = (MasterDetailPage)Current.MainPage;
-            master.Detail = page;
+
+            if (master.Detail != page)
+            {
+                master.Detail = page;
+            }
+
+            master.IsPresented = false;
         }
     }
 }
