@@ -10,14 +10,18 @@ namespace NativeCode.Mobile.AppCompat.Extensions
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
 
+    /// <summary>
+    /// Provides extensions for <see cref="Font" /> instances.
+    /// </summary>
     public static class FontExtensions
     {
         /// <summary>
-        /// Converts a <see cref="Font"/> to a <see cref="Typeface"/>.
+        /// Converts a <see cref="Font" /> to a <see cref="Typeface" />.
         /// </summary>
         /// <param name="font">The font.</param>
         /// <param name="context">The context.</param>
-        /// <returns>Returns a <see cref="Typeface"/>.</returns>
+        /// <returns>Returns a <see cref="Typeface" />.</returns>
+        /// <remarks><see href="https://github.com/XLabs/Xamarin-Forms-Labs" /></remarks>
         public static Typeface ToExtendedTypeface(this Font font, Context context)
         {
             var key = font.ToHashmapKey();

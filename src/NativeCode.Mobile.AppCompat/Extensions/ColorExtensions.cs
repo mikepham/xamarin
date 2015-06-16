@@ -4,6 +4,9 @@ namespace NativeCode.Mobile.AppCompat.Extensions
 
     using Xamarin.Forms;
 
+    /// <summary>
+    /// Provides extensions for <see cref="Color" /> instances.
+    /// </summary>
     public static class ColorExtensions
     {
         /// <summary>
@@ -11,7 +14,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// </summary>
         /// <param name="color">The color.</param>
         /// <param name="factor">The factor.</param>
-        /// <returns>Returns a <see cref="Color"/>.</returns>
+        /// <returns>Returns a <see cref="Color" />.</returns>
         public static Color AdjustColorBrightness(this Color color, float factor)
         {
             // TODO: This might need to be tweaked.
@@ -23,7 +26,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// </summary>
         /// <param name="color">The color.</param>
         /// <param name="factor">The factor.</param>
-        /// <returns>Returns a <see cref="Color"/>.</returns>
+        /// <returns>Returns a <see cref="Color" />.</returns>
         public static Color DarkenColor(this Color color, float factor)
         {
             return color.AdjustColorBrightness(factor);
@@ -33,7 +36,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// Halves the transparency value.
         /// </summary>
         /// <param name="color">The color.</param>
-        /// <returns>Returns a <see cref="Color"/>.</returns>
+        /// <returns>Returns a <see cref="Color" />.</returns>
         public static Color HalfTransparent(this Color color)
         {
             return Color.FromRgba(color.A / 2.0, color.R, color.G, color.B);
@@ -43,7 +46,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// Lightens the color.
         /// </summary>
         /// <param name="color">The color.</param>
-        /// <returns>Returns a <see cref="Color"/>.</returns>
+        /// <returns>Returns a <see cref="Color" />.</returns>
         public static Color LightenColor(this Color color)
         {
             return color.AdjustColorBrightness(1.1f);
@@ -53,7 +56,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// Converts opacity to an alpha value.
         /// </summary>
         /// <param name="opacity">The opacity.</param>
-        /// <returns>Returns a <see cref="int"/>.</returns>
+        /// <returns>Returns a <see cref="int" />.</returns>
         public static int OpacityToAlpha(this float opacity)
         {
             return (int)(255f * opacity);
@@ -63,7 +66,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// Converts a color to be opaque.
         /// </summary>
         /// <param name="color">The color.</param>
-        /// <returns>Returns a <see cref="Color"/>.</returns>
+        /// <returns>Returns a <see cref="Color" />.</returns>
         public static Color OpaqueColor(this Color color)
         {
             return Color.FromRgb(color.R, color.G, color.B);

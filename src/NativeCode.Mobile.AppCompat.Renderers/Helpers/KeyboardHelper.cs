@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.Common.Droid.Helpers
+namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
 {
     using System;
     using System.Reflection;
@@ -9,7 +9,7 @@ namespace NativeCode.Mobile.Common.Droid.Helpers
 
     using View = Android.Views.View;
 
-    public static class KeyboardHelper
+    internal static class KeyboardHelper
     {
         private const string KeyboardExtensions = "Xamarin.Forms.Platform.Android.KeyboardExtensions, Xamarin.Forms.Platform.Android";
 

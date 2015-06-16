@@ -2,6 +2,9 @@ namespace NativeCode.Mobile.AppCompat.Extensions
 {
     using Android.App;
 
+    /// <summary>
+    /// Provides extensions for <see cref="Activity" /> instances.
+    /// </summary>
     public static class ActivityExtensions
     {
         /// <summary>

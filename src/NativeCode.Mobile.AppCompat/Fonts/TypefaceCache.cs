@@ -4,10 +4,17 @@ namespace NativeCode.Mobile.AppCompat.Fonts
 
     using Android.Graphics;
 
+    /// <summary>
+    /// Provides caching for <see cref="Typeface" /> instances.
+    /// </summary>
+    /// <remarks><see href="https://github.com/XLabs/Xamarin-Forms-Labs" /></remarks>
     public static class TypefaceCache
     {
         private static ITypefaceCache sharedCache;
 
+        /// <summary>
+        /// Gets or sets the shared cache.
+        /// </summary>
         public static ITypefaceCache SharedCache
         {
             get { return sharedCache ?? (sharedCache = new DefaultTypefaceCache()); }

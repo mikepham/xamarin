@@ -1,17 +1,17 @@
-using NativeCode.Mobile.Common.Droid.Renderers;
+using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(Button), typeof(AppCompatButtonRenderer))]
 
-namespace NativeCode.Mobile.Common.Droid.Renderers
+namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System;
 
     using Android.Support.V7.Widget;
 
     using NativeCode.Mobile.AppCompat.Extensions;
-    using NativeCode.Mobile.Common.Droid.Extensions;
+    using NativeCode.Mobile.AppCompat.Renderers.Extensions;
 
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
