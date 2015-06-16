@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat", "NativeCode.Mobile.Common.Droid\NativeCode.Mobile.AppCompat.csproj", "{09452688-B99E-4C70-B6B2-86077A663F64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat", "NativeCode.Mobile.AppCompat\NativeCode.Mobile.AppCompat.csproj", "{09452688-B99E-4C70-B6B2-86077A663F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat.Renderers", "NativeCode.Mobile.AppCompat.Renderers\NativeCode.Mobile.AppCompat.Renderers.csproj", "{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Droid", "Demo\Demo.Droid\Demo.Droid.csproj", "{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo\Demo.csproj", "{217137FB-C264-4C05-92BA-191FBB8CD9C3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat.Renderers", "NativeCode.Mobile.AppCompat.Renderers\NativeCode.Mobile.AppCompat.Renderers.csproj", "{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
