@@ -84,6 +84,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\NativeCode.Mobile.AppCompat.Renderers\NativeCode.Mobile.AppCompat.Renderers.csproj">
+      <Project>{f19d2a4e-6d0d-483f-8baa-b64bf1b5277f}</Project>
+      <Name>NativeCode.Mobile.AppCompat.Renderers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\NativeCode.Mobile.AppCompat\NativeCode.Mobile.AppCompat.csproj">
       <Project>{09452688-B99E-4C70-B6B2-86077A663F64}</Project>
       <Name>NativeCode.Mobile.AppCompat</Name>
