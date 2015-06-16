@@ -7,7 +7,7 @@ Provides various libraries for making Xamarin.Forms development easier. Check ou
 [Continuous]
 (<a href="http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1"><img src="http://nativecode.no-ip.org:90/app/rest/builds/buildType:(id:xamarin_release)/statusIcon"/></a>)
 
-## AppCompat
+## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/)
 Simply install the NuGet package into your Android project.
 
 `Install-Package NativeCode.Mobile.AppCompat`
@@ -34,7 +34,7 @@ public class MainActivity : AppCompatFormsApplicationActivity
 
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
 
-## AppCompat Renderers
+## [AppCompat Renderers](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
 Simply install the NuGet package into your Android project.
 
 `Install-Package NativeCode.Mobile.AppCompat.Renderers`
