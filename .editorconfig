@@ -31,6 +31,6 @@ indent_size = 2
 indent_style = space
 
 ; Misc
-[*.{build,config,xml}]
+[*.{build,config,StyleCop,xml}]
 indent_size = 2
 indent_style = space
