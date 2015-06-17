@@ -11,8 +11,16 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
 
     using Java.Lang;
 
+    /// <summary>
+    /// Adapts an existing <see cref="Window"/> to override required methods to implement <see cref="AppCompatDelegate"/>.
+    /// </summary>
     internal class WindowAdapter : Window
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WindowAdapter"/> class.
+        /// </summary>
+        /// <param name="window">The window.</param>
+        /// <param name="appCompatDelegateProvider">The application delegate provider.</param>
         internal WindowAdapter(Window window, IAppCompatDelegateProvider appCompatDelegateProvider) : base(window.Context)
         {
             this.AppCompatDelegateProvider = appCompatDelegateProvider;

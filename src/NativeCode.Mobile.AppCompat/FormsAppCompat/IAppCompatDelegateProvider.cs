@@ -14,7 +14,7 @@
         AppCompatDelegate AppCompatDelegate { get; }
 
         /// <summary>
-        /// Gets the coordinator layout.
+        /// Gets the <see cref="CoordinatorLayout"/> used by <see cref="AppCompatFormsApplicationActivity"/>.
         /// </summary>
         /// <returns>Returns a <see cref="CoordinatorLayout" />.</returns>
         CoordinatorLayout GetCoordinatorLayout();

@@ -12,6 +12,9 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
     using JavaObject = Java.Lang.Object;
     using SupportActionBar = Android.Support.V7.App.ActionBar;
 
+    /// <summary>
+    /// Adapts a <see cref="Android.Support.V7.App.ActionBar.Tab"/> to a <see cref="Android.App.ActionBar.Tab"/>.
+    /// </summary>
     [Obsolete("Will be removed in a future version.", false)]
     internal class TabAdapter : ActionBar.Tab
     {

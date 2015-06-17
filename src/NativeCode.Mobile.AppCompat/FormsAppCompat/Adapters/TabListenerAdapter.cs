@@ -8,6 +8,9 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
     using SupportActionBar = Android.Support.V7.App.ActionBar;
     using SupportFragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
+    /// <summary>
+    /// Adapts a <see cref="Android.Support.V7.App.ActionBar.ITabListener"/> to a <see cref="Android.App.ActionBar.ITabListener"/>.
+    /// </summary>
     [Obsolete("Will be removed in a future version.", false)]
     internal class TabListenerAdapter : JavaObject, SupportActionBar.ITabListener
     {

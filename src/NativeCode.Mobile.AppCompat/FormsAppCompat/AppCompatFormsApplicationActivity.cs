@@ -6,6 +6,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
     using Android.Support.Design.Widget;
     using Android.Support.V7.App;
     using Android.Views;
+    using Android.Widget;
 
     using Java.Lang;
 
@@ -140,12 +141,22 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 
         public override void SetContentView(View view)
         {
-            this.coordinator = new CoordinatorLayout(this);
-            this.coordinator.AddView(view);
+            var child = view;
 
-            this.disposables.Add(this.coordinator);
+            // We need to create a CoordinatorLayout for Snackbars to find so we get the proper display.
+            // This simply wraps the LinearLayout that the FormsApplicationActivity creates.
+            // TODO: This relies too much on the implementation detail of the FormsApplicationActivity.
+            if (child is LinearLayout)
+            {
+                this.coordinator = new CoordinatorLayout(this);
+                this.coordinator.AddView(view);
 
-            this.AppCompatDelegate.SetContentView(this.coordinator);
+                this.disposables.Add(this.coordinator);
+
+                child = this.coordinator;
+            }
+
+            this.AppCompatDelegate.SetContentView(child);
         }
 
         public override void SetContentView(View view, ViewGroup.LayoutParams @params)
@@ -162,12 +173,12 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         {
             if (disposing)
             {
-                this.disposables.Dispose();
-
                 this.appCompatDelegate = null;
                 this.actionBarAdapter = null;
                 this.coordinator = null;
                 this.windowAdapter = null;
+
+                this.disposables.Dispose();
             }
 
             base.Dispose(disposing);
