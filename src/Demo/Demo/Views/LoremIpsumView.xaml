@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
+             x:Class="Demo.Views.LoremIpsumView">
+  <RelativeLayout>
+    <ScrollView x:Name="PageScrollView">
+      <StackLayout Padding="20">
+        <Label Text="{Binding LoremIpsumText}" VerticalOptions="Center" HorizontalOptions="Center" />
+      </StackLayout>
+    </ScrollView>
+    <controls:FloatingButton RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=PageScrollView, Property=Width, Factor=0.25}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=PageScrollView, Property=Height, Factor=0.25}" />
+  </RelativeLayout>
+</ContentPage>
