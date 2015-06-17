@@ -71,3 +71,6 @@ Once installed, you will have to call `AppCompatRenderers.EnableAll` inside your
 ![screenshot-masterdetail](screenshots/screenshot-masterdetail.png)
 ![screenshot-snackbar](screenshots/screenshot-snackbar.png)
 ![screenshot-moreactions](screenshots/screenshot-moreactions.png)
+![movie-actionbardrawertoggle](screenshots/movie-actionbardrawertoggle.gif)
+
+<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/reginfo7665/folders/Snagit/media/a5926a88-0862-4046-be88-a664132c06e7/embed" height="682" width="384" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
