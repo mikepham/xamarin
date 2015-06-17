@@ -49,5 +49,15 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         {
             return context.GetAppCompatDelegate().SupportActionBar.ThemedContext;
         }
+
+        /// <summary>
+        /// Gets the support action bar.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <returns>Returns a <see cref="ActionBar" />.</returns>
+        public static ActionBar GetSupportActionBar(this Context context)
+        {
+            return context.GetAppCompatDelegate().SupportActionBar;
+        }
     }
 }

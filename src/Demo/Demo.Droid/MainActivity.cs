@@ -5,6 +5,7 @@
     using Android.OS;
 
     using NativeCode.Mobile.AppCompat.FormsAppCompat;
+    using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
     using Xamarin.Forms;
 
@@ -20,6 +21,7 @@
             base.OnCreate(savedInstanceState);
 
             Forms.Init(this, savedInstanceState);
+            RendererRegistration.EnableAll();
 
             this.LoadApplication(new App());
         }

@@ -4,12 +4,16 @@
              xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
              x:Class="Demo.Views.LoremIpsumView">
   <RelativeLayout>
-    <ScrollView x:Name="PageScrollView">
+    <ScrollView RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
       <StackLayout Padding="20">
-        <Label Text="{Binding LoremIpsumText}" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Label Text="{Binding Text}" VerticalOptions="Center" HorizontalOptions="Center" />
       </StackLayout>
     </ScrollView>
-    <controls:FloatingButton RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=PageScrollView, Property=Width, Factor=0.25}"
-                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=PageScrollView, Property=Height, Factor=0.25}" />
+    <controls:FloatingButton Command="{Binding AddTextCommand}"
+                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-100}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-90}" />
   </RelativeLayout>
 </ContentPage>

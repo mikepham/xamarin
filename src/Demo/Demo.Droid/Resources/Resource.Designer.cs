@@ -4056,6 +4056,9 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f070125
 			public const int Base_Widget_Design_TabLayout = 2131165477;
 			
+			// aapt resource value: 0x7f070135
+			public const int DrawerArrowStyle = 2131165493;
+			
 			// aapt resource value: 0x7f070010
 			public const int Platform_AppCompat = 2131165200;
 			

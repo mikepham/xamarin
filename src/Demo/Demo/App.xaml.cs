@@ -27,7 +27,8 @@
             {
                 Detail = new MainView(),
                 Master = new MenuView(),
-                MasterBehavior = MasterBehavior.Popover
+                MasterBehavior = MasterBehavior.Popover,
+                Title = "AppCompat Demo"
             };
 
             return MasterDetail;
