@@ -85,7 +85,6 @@
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
-    <Compile Include="Renderers\DynamicAttributeSet.cs" />
     <Compile Include="Renderers\FloatingButtonRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
