@@ -8,6 +8,7 @@ namespace NativeCode.Mobile.AppCompat
     using Android.Views;
 
     using NativeCode.Mobile.AppCompat.EventListeners;
+    using NativeCode.Mobile.AppCompat.Helpers;
 
     using Xamarin.Forms.Platform.Android;
 
@@ -43,7 +44,7 @@ namespace NativeCode.Mobile.AppCompat
         /// Registers a <see cref="IDisposable" /> for later disposal.
         /// </summary>
         /// <param name="disposable">The disposable.</param>
-        public void RegisterDisposable(IDisposable disposable)
+        public void Add(IDisposable disposable)
         {
             this.disposables.Add(disposable);
         }
@@ -54,7 +55,7 @@ namespace NativeCode.Mobile.AppCompat
         /// <typeparam name="T">The type that implements <see cref="IDisposable" />.</typeparam>
         /// <param name="disposable">The disposable.</param>
         /// <returns>Returns the instance passed in.</returns>
-        public T RegisterDisposable<T>(T disposable) where T : IDisposable
+        public T Add<T>(T disposable) where T : IDisposable
         {
             this.disposables.Add(disposable);
             return disposable;
@@ -137,7 +138,7 @@ namespace NativeCode.Mobile.AppCompat
         protected void SetupClickable(TNativeView view, ICommand command, object parameter)
         {
             var listener = new OnClickListener(v => this.HandleClickListener(this.Control, command, parameter));
-            this.RegisterDisposable(listener);
+            this.Add(listener);
 
             view.Clickable = true;
             view.SetOnClickListener(listener);

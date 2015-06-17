@@ -1,16 +1,17 @@
 namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 {
-    using Android;
-    using Android.App;
     using Android.Content.Res;
     using Android.Graphics;
     using Android.OS;
+    using Android.Support.Design.Widget;
     using Android.Support.V7.App;
     using Android.Views;
+    using Android.Widget;
 
     using Java.Lang;
 
     using NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters;
+    using NativeCode.Mobile.AppCompat.Helpers;
 
     using Xamarin.Forms.Platform.Android;
 
@@ -38,9 +39,13 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public const string CompatThemeLightDarkActionBar = "@style/Theme.AppCompat.Light.DarkActionBar";
 
+        private readonly DisposableContainer disposables = new DisposableContainer();
+
         private ActionBarAdapter actionBarAdapter;
 
         private AppCompatDelegate appCompatDelegate;
+
+        private CoordinatorLayout coordinator;
 
         private WindowAdapter windowAdapter;
 
@@ -56,7 +61,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </para></remarks>
         public override ActionBar ActionBar
         {
-            get { return this.actionBarAdapter ?? (this.actionBarAdapter = new ActionBarAdapter(this)); }
+            get { return this.actionBarAdapter ?? this.disposables.Add(this.actionBarAdapter = new ActionBarAdapter(this)); }
         }
 
         /// <summary>
@@ -64,7 +69,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public AppCompatDelegate AppCompatDelegate
         {
-            get { return this.appCompatDelegate ?? (this.appCompatDelegate = AppCompatDelegate.Create(this, this)); }
+            get { return this.appCompatDelegate ?? this.disposables.Add(this.appCompatDelegate = AppCompatDelegate.Create(this, this)); }
         }
 
         /// <summary>
@@ -97,12 +102,17 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </para></remarks>
         public override Window Window
         {
-            get { return this.windowAdapter ?? (this.windowAdapter = new WindowAdapter(base.Window, this)); }
+            get { return this.windowAdapter ?? this.disposables.Add(this.windowAdapter = new WindowAdapter(base.Window, this)); }
         }
 
         public override void AddContentView(View view, ViewGroup.LayoutParams @params)
         {
             this.AppCompatDelegate.AddContentView(view, @params);
+        }
+
+        public CoordinatorLayout GetCoordinatorLayout()
+        {
+            return this.coordinator;
         }
 
         public override void InvalidateOptionsMenu()
@@ -131,7 +141,22 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 
         public override void SetContentView(View view)
         {
-            this.AppCompatDelegate.SetContentView(view);
+            var child = view;
+
+            // We need to create a CoordinatorLayout for Snackbars to find so we get the proper display.
+            // This simply wraps the LinearLayout that the FormsApplicationActivity creates.
+            // TODO: This relies too much on the implementation detail of the FormsApplicationActivity.
+            if (child is LinearLayout)
+            {
+                this.coordinator = new CoordinatorLayout(this);
+                this.coordinator.AddView(view);
+
+                this.disposables.Add(this.coordinator);
+
+                child = this.coordinator;
+            }
+
+            this.AppCompatDelegate.SetContentView(child);
         }
 
         public override void SetContentView(View view, ViewGroup.LayoutParams @params)
@@ -148,23 +173,12 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         {
             if (disposing)
             {
-                if (this.actionBarAdapter != null)
-                {
-                    this.actionBarAdapter.Dispose();
-                    this.actionBarAdapter = null;
-                }
+                this.appCompatDelegate = null;
+                this.actionBarAdapter = null;
+                this.coordinator = null;
+                this.windowAdapter = null;
 
-                if (this.windowAdapter != null)
-                {
-                    this.windowAdapter.Dispose();
-                    this.windowAdapter = null;
-                }
-
-                if (this.appCompatDelegate != null)
-                {
-                    this.appCompatDelegate.Dispose();
-                    this.appCompatDelegate = null;
-                }
+                this.disposables.Dispose();
             }
 
             base.Dispose(disposing);

@@ -3,8 +3,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
              x:Class="Demo.Views.MainView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
-  <StackLayout>
-    <Button Text="Hit me twice!" />
+  <StackLayout Padding="20">
+    <Label Text="{Binding Title}" />
+    <Button Command="{Binding ShowSnackBar}" Text="Hit me twice!" />
     <StackLayout Orientation="Horizontal">
       <Label Text="Switch On/Off" />
       <Switch />
@@ -14,7 +15,7 @@
       <Entry HorizontalOptions="FillAndExpand" />
     </StackLayout>
     <RelativeLayout>
-      <controls:FloatingButton Color="Green" Icon="Icon" />
+      <controls:FloatingButton Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
     </RelativeLayout>
   </StackLayout>
 </ContentPage>

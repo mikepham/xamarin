@@ -2988,7 +2988,7 @@ namespace Demo.Droid
 			public const int fab_background = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int Icon = 2130837564;
+			public const int launcher = 2130837564;
 			
 			// aapt resource value: 0x7f02003e
 			public const int notification_template_icon_bg = 2130837566;

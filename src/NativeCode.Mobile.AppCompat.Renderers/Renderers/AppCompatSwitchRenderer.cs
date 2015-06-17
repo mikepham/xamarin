@@ -57,7 +57,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
         public void OnCheckedChanged(CompoundButton buttonView, bool isChecked)
         {
-            ((IElementController)this.Element).SetValueFromRenderer(Switch.IsToggledProperty, isChecked ? 1 : 0);
+            ((IElementController)this.Element).SetValueFromRenderer(Switch.IsToggledProperty, isChecked);
         }
 
         protected override void Dispose(bool disposing)

@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="FloatingButton.cs" />
     <Compile Include="FloatingButtonSize.cs" />
+    <Compile Include="Platforms\IUserNotifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
