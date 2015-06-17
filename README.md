@@ -34,6 +34,14 @@ public class MainActivity : AppCompatFormsApplicationActivity
 
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
 
+## [AppCompat Controls](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
+Simply install the NuGet package into your PCL project that contains your UI.
+
+`Install-Package NativeCode.Mobile.AppCompat.Controls`
+
+### Available controls
+- FloatingButton ([FloatingActionButton](https://developer.android.com/reference/android/support/design/widget/FloatingActionButton.html))
+
 ## [AppCompat Renderers](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
 Simply install the NuGet package into your Android project.
 

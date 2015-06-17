@@ -89,6 +89,7 @@
     <Compile Include="FormsAppCompat\Adapters\TabListenerAdapter.cs" />
     <Compile Include="FormsAppCompat\Adapters\WindowAdapter.cs" />
     <Compile Include="FormsAppCompat\IAppCompatDelegateProvider.cs" />
+    <Compile Include="IDisposableContainer.cs" />
     <Compile Include="InflateViewRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

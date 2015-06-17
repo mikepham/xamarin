@@ -18,7 +18,7 @@ namespace NativeCode.Mobile.AppCompat
     /// </summary>
     /// <typeparam name="TView">The type of the view.</typeparam>
     /// <typeparam name="TNativeView">The type of the native view.</typeparam>
-    public abstract class InflateViewRenderer<TView, TNativeView> : ViewRenderer<TView, TNativeView>
+    public abstract class InflateViewRenderer<TView, TNativeView> : ViewRenderer<TView, TNativeView>, IDisposableContainer
         where TView : View where TNativeView : Android.Views.View
     {
         private readonly List<IDisposable> disposables = new List<IDisposable>();
@@ -37,6 +37,27 @@ namespace NativeCode.Mobile.AppCompat
         protected LayoutInflater LayoutInflater
         {
             get { return this.Activity.LayoutInflater; }
+        }
+
+        /// <summary>
+        /// Registers a <see cref="IDisposable" /> for later disposal.
+        /// </summary>
+        /// <param name="disposable">The disposable.</param>
+        public void RegisterDisposable(IDisposable disposable)
+        {
+            this.disposables.Add(disposable);
+        }
+
+        /// <summary>
+        /// Registers a <see cref="IDisposable" /> for later disposal.
+        /// </summary>
+        /// <typeparam name="T">The type that implements <see cref="IDisposable" />.</typeparam>
+        /// <param name="disposable">The disposable.</param>
+        /// <returns>Returns the instance passed in.</returns>
+        public T RegisterDisposable<T>(T disposable) where T : IDisposable
+        {
+            this.disposables.Add(disposable);
+            return disposable;
         }
 
         /// <summary>
@@ -76,19 +97,35 @@ namespace NativeCode.Mobile.AppCompat
         /// Inflates the native control from a resource.
         /// </summary>
         /// <param name="id">The identifier.</param>
-        /// <returns>Returns a <see cref="TNativeView"/> instance.</returns>
-        protected TNativeView InflateNativeControl(int id)
+        /// <param name="group">The group.</param>
+        /// <param name="attachToRoot">if set to <c>true</c> [attach to root].</param>
+        /// <returns>Returns a <see cref="TNativeView" /> instance.</returns>
+        /// <exception cref="System.InvalidCastException">Could not cast the View to a  + typeof(TNativeView).Name + .</exception>
+        protected TNativeView InflateNativeControl(int id, ViewGroup @group = null, bool attachToRoot = false)
         {
-            return (TNativeView)this.LayoutInflater.Inflate(id, null, false);
+            return this.InflateNativeControl<TNativeView>(id, @group, attachToRoot);
         }
 
         /// <summary>
-        /// Registers a <see cref="IDisposable" /> for later disposal.
+        /// Inflates the native control from a resource.
         /// </summary>
-        /// <param name="disposable">The disposable.</param>
-        protected void RegisterDisposable(IDisposable disposable)
+        /// <typeparam name="T">The type of the view.</typeparam>
+        /// <param name="id">The identifier.</param>
+        /// <param name="group">The group.</param>
+        /// <param name="attachToRoot">if set to <c>true</c> [attach to root].</param>
+        /// <returns>Returns a casted <see cref="View" />.</returns>
+        /// <exception cref="System.InvalidCastException">Could not cast the View to a  + typeof(TNativeView).Name + .</exception>
+        protected T InflateNativeControl<T>(int id, ViewGroup @group = null, bool attachToRoot = false) where T : Android.Views.View
         {
-            this.disposables.Add(disposable);
+            var view = this.LayoutInflater.Inflate(id, @group, attachToRoot);
+            var native = view as T;
+
+            if (native == null)
+            {
+                throw new InvalidCastException("Could not cast the View to a " + typeof(TNativeView).Name + ".");
+            }
+
+            return native;
         }
 
         /// <summary>
