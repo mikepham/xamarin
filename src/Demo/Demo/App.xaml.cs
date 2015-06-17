@@ -9,19 +9,42 @@
         public App()
         {
             this.InitializeComponent();
-            this.MainPage = new MasterDetailPage { Detail = new MainView(), Master = new MenuView(), MasterBehavior = MasterBehavior.Popover };
+            this.MainPage = CreateMainPage();
         }
 
-        public static void ChangeDetailPage(Page page)
+        internal static MasterDetailPage MasterDetail { get; private set; }
+
+        internal static INavigation Navigation { get; private set; }
+
+        private static Page CreateMainPage()
         {
-            var master = (MasterDetailPage)Current.MainPage;
+            return CreateNavigationPage(CreateMasterDetailPage());
+        }
 
-            if (master.Detail != page)
+        private static MasterDetailPage CreateMasterDetailPage()
+        {
+            MasterDetail = new MasterDetailPage
             {
-                master.Detail = page;
-            }
+                Detail = new MainView(),
+                Master = new MenuView(),
+                MasterBehavior = MasterBehavior.Popover,
+                Title = "AppCompat Demo"
+            };
 
-            master.IsPresented = false;
+            return MasterDetail;
+        }
+
+        private static NavigationPage CreateNavigationPage(Page page)
+        {
+            var navigation = new NavigationPage(page);
+
+            navigation.Popped += (sender, args) => MasterDetail.IsPresented = false;
+            navigation.PoppedToRoot += (sender, args) => MasterDetail.IsPresented = false;
+            navigation.Pushed += (sender, args) => MasterDetail.IsPresented = false;
+
+            Navigation = navigation.Navigation;
+
+            return navigation;
         }
     }
 }

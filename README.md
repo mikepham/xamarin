@@ -47,12 +47,13 @@ Simply install the NuGet package into your Android project.
 
 `Install-Package NativeCode.Mobile.AppCompat.Renderers`
 
-Once installed, the renderers will be registered to replace the existing Xamarin.Forms renderers with ones that use the AppCompat controls, giving you Material Design elements.
+Once installed, you will have to call `AppCompatRenderers.EnableAll` inside your OnCreate, after `Forms.Init` is called. This will register all of the AppCompat renderers to replace existing Xamarin.Forms renderers.
 
 ### Current Renderers
 - Button ([AppCompatButton](http://developer.android.com/reference/android/support/v7/widget/AppCompatButton.html))
 - Entry ([AppCompatEditText](http://developer.android.com/reference/android/support/v7/widget/AppCompatEditText.html))
 - Switch ([SwitchCompat](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html))
+- MasterDetailPage
 
 ## Devices Tested
 
@@ -70,3 +71,6 @@ Once installed, the renderers will be registered to replace the existing Xamarin
 ![screenshot-masterdetail](screenshots/screenshot-masterdetail.png)
 ![screenshot-snackbar](screenshots/screenshot-snackbar.png)
 ![screenshot-moreactions](screenshots/screenshot-moreactions.png)
+![movie-actionbardrawertoggle](screenshots/movie-actionbardrawertoggle.gif)
+
+<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/reginfo7665/folders/Snagit/media/a5926a88-0862-4046-be88-a664132c06e7/embed" height="682" width="384" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
