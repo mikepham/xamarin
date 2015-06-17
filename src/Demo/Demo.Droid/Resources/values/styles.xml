@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-  <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar" />
+  <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorAccent">#8BC34A</item>
+    <item name="colorPrimary">#03A9F4</item>
+    <item name="colorPrimaryDark">#0288D1</item>
+  </style>
 
   <style name="AppTheme" parent="AppTheme.Base">
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
@@ -11,6 +15,4 @@
     <item name="spinBars">true</item>
     <item name="color">@android:color/white</item>
   </style>
-
-  <item name="colorAccent" type="color">@color/floating_action_button_color</item>
 </resources>
