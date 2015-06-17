@@ -8,7 +8,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     /// <summary>
     /// Allows registration of renderers.
     /// </summary>
-    public static class RendererRegistration
+    public static class AppCompatRenderers
     {
         private const string RegistrarType = "Xamarin.Forms.Registrar, Xamarin.Forms.Core";
 
@@ -17,9 +17,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         private static readonly MethodInfo RegisterMethod;
 
         /// <summary>
-        /// Initializes static members of the <see cref="RendererRegistration"/> class.
+        /// Initializes static members of the <see cref="AppCompatRenderers"/> class.
         /// </summary>
-        static RendererRegistration()
+        static AppCompatRenderers()
         {
             var type = Type.GetType(RegistrarType, true);
             var property = type.GetProperty("Registered", BindingFlags.NonPublic | BindingFlags.Static);

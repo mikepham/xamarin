@@ -87,7 +87,7 @@
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
     <Compile Include="Renderers\FloatingButtonRenderer.cs" />
-    <Compile Include="Renderers\RendererRegistration.cs" />
+    <Compile Include="Renderers\AppCompatRenderers.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
