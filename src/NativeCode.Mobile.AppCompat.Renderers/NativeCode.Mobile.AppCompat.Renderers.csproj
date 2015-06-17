@@ -83,6 +83,7 @@
     <Compile Include="Platforms\UserNotifier.cs" />
     <Compile Include="Renderers\AppCompatButtonRenderer.cs" />
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />
+    <Compile Include="Renderers\AppCompatMasterDetailRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
     <Compile Include="Renderers\FloatingButtonRenderer.cs" />

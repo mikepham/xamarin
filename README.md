@@ -30,17 +30,17 @@ public class MainActivity : AppCompatFormsApplicationActivity
 }
 ```
 
-![screenshot-material-dark](screenshots/screenshot-material-dark.png)
-
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
 
 ## [AppCompat Controls](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
 Simply install the NuGet package into your PCL project that contains your UI.
+NOTE: You must install the Renderers package into your Android project.
 
 `Install-Package NativeCode.Mobile.AppCompat.Controls`
 
 ### Available controls
 - FloatingButton ([FloatingActionButton](https://developer.android.com/reference/android/support/design/widget/FloatingActionButton.html))
+- IUserNotifier ([Snackbar](https://developer.android.com/reference/android/support/design/widget/Snackbar.html))
 
 ## [AppCompat Renderers](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
 Simply install the NuGet package into your Android project.
@@ -53,3 +53,20 @@ Once installed, the renderers will be registered to replace the existing Xamarin
 - Button ([AppCompatButton](http://developer.android.com/reference/android/support/v7/widget/AppCompatButton.html))
 - Entry ([AppCompatEditText](http://developer.android.com/reference/android/support/v7/widget/AppCompatEditText.html))
 - Switch ([SwitchCompat](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html))
+
+## Devices Tested
+
+### Phones
+- Nexus 5 (emulator)
+- Samsung Galaxy S6
+
+### Tablets
+- Samsung Tab 7
+- Nexus 7
+
+## Screenshots
+
+![screenshot](screenshots/screenshot.png)
+![screenshot-masterdetail](screenshots/screenshot-masterdetail.png)
+![screenshot-snackbar](screenshots/screenshot-snackbar.png)
+![screenshot-moreactions](screenshots/screenshot-moreactions.png)

@@ -149,6 +149,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
             if (child is LinearLayout)
             {
                 this.coordinator = new CoordinatorLayout(this);
+                this.coordinator.SetFitsSystemWindows(true);
                 this.coordinator.AddView(view);
 
                 this.disposables.Add(this.coordinator);
@@ -184,6 +185,15 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
             base.Dispose(disposing);
         }
 
+        /// <summary>
+        /// Allows initialization prior to the <see cref="FormsApplicationActivity"/> receiving the
+        /// OnCreate call but after the <see cref="AppCompatDelegate"/> is initialized.
+        /// </summary>
+        /// <param name="savedInstanceState">State of the saved instance.</param>
+        protected virtual void BeforeFormsApplicationActivityCreate(Bundle savedInstanceState)
+        {
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             this.AppCompatDelegate.InstallViewFactory();
@@ -191,6 +201,9 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
             // NOTE: This is an important difference from AppCompatActivity, as we need to call this before
             // we make the base call so that the SetContentView works properly for Forms.
             this.AppCompatDelegate.OnCreate(savedInstanceState);
+
+            // Allow additional initialization before we call FormsApplicationActivity.
+            this.BeforeFormsApplicationActivityCreate(savedInstanceState);
 
             base.OnCreate(savedInstanceState);
         }
