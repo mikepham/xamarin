@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.AppCompat
+namespace NativeCode.Mobile.AppCompat.Helpers
 {
     using System;
 
@@ -11,7 +11,7 @@ namespace NativeCode.Mobile.AppCompat
         /// Registers a <see cref="IDisposable" /> for later disposal.
         /// </summary>
         /// <param name="disposable">The disposable.</param>
-        void RegisterDisposable(IDisposable disposable);
+        void Add(IDisposable disposable);
 
         /// <summary>
         /// Registers a <see cref="IDisposable" /> for later disposal.
@@ -19,6 +19,6 @@ namespace NativeCode.Mobile.AppCompat
         /// <typeparam name="T">The type that implements <see cref="IDisposable" />.</typeparam>
         /// <param name="disposable">The disposable.</param>
         /// <returns>Returns the instance passed in.</returns>
-        T RegisterDisposable<T>(T disposable) where T : IDisposable;
+        T Add<T>(T disposable) where T : IDisposable;
     }
 }

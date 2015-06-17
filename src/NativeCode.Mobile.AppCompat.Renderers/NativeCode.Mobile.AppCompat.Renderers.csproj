@@ -80,6 +80,7 @@
     <Compile Include="Extensions\EntryExtensions.cs" />
     <Compile Include="Helpers\KeyboardHelper.cs" />
     <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Platforms\UserNotifier.cs" />
     <Compile Include="Renderers\AppCompatButtonRenderer.cs" />
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />

@@ -10,10 +10,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using System.ComponentModel;
 
     using Android.Support.Design.Widget;
-    using Android.Views;
 
     using NativeCode.Mobile.AppCompat.Controls;
-    using NativeCode.Mobile.AppCompat.EventListeners;
     using NativeCode.Mobile.AppCompat.Extensions;
 
     using Xamarin.Forms.Platform.Android;
@@ -29,8 +27,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 var control = new FloatingActionButton(this.Context.GetAppCompatThemedContext());
                 this.SetNativeControl(control);
 
-                control.Clickable = true;
-                control.SetOnClickListener(this.RegisterDisposable(new OnClickListener(this.HandleClickListener)));
+                this.SetupClickable(this.Control, this.Element.Command, this.Element.CommandParameter);
 
                 this.UpdateBackgroundColor();
                 this.UpdateColor();
@@ -53,14 +50,6 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             else if (e.PropertyName == FloatingButton.IconProperty.PropertyName)
             {
                 this.UpdateIcon();
-            }
-        }
-
-        private void HandleClickListener(View view)
-        {
-            if (this.Element.Command != null && this.Element.Command.CanExecute(this.Element.CommandParameter))
-            {
-                this.Element.Command.Execute(this.Element.CommandParameter);
             }
         }
 
