@@ -1,5 +1,7 @@
 namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 {
+    using Android;
+    using Android.App;
     using Android.Content.Res;
     using Android.Graphics;
     using Android.OS;
@@ -18,6 +20,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
     /// <summary>
     /// Provides a <see cref="AppCompatDelegate"/>-backed activity while maintaining compatibility with $Xamarin.Forms$.
     /// </summary>
+    /// <remarks>See <see cref="http://bit.ly/1Lfr30c"/> for information on implementation.</remarks>
     public class AppCompatFormsApplicationActivity : FormsApplicationActivity, IAppCompatCallback, IAppCompatDelegateProvider
     {
         /// <summary>
@@ -104,7 +107,6 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 
         public override void InvalidateOptionsMenu()
         {
-            base.InvalidateOptionsMenu();
             this.AppCompatDelegate.InvalidateOptionsMenu();
         }
 
@@ -120,6 +122,11 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 
         public virtual void OnSupportActionModeStarted(ActionMode mode)
         {
+        }
+
+        public ActionMode OnWindowStartingSupportActionMode(ActionMode.ICallback callback)
+        {
+            return this.AppCompatDelegate.StartSupportActionMode(callback);
         }
 
         public override void SetContentView(View view)
@@ -166,6 +173,9 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         protected override void OnCreate(Bundle savedInstanceState)
         {
             this.AppCompatDelegate.InstallViewFactory();
+
+            // NOTE: This is an important difference from AppCompatActivity, as we need to call this before
+            // we make the base call so that the SetContentView works properly for Forms.
             this.AppCompatDelegate.OnCreate(savedInstanceState);
 
             base.OnCreate(savedInstanceState);
