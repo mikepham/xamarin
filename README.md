@@ -30,8 +30,6 @@ public class MainActivity : AppCompatFormsApplicationActivity
 }
 ```
 
-![screenshot-material-dark](screenshots/screenshot-material-dark.png)
-
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
 
 ## [AppCompat Controls](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
@@ -65,3 +63,10 @@ Once installed, the renderers will be registered to replace the existing Xamarin
 ### Tablets
 - Samsung Tab 7
 - Nexus 7
+
+## Screenshots
+
+![screenshot](screenshots/screenshot.png)
+![screenshot-masterdetail](screenshots/screenshot-masterdetail.png)
+![screenshot-snackbar](screenshots/screenshot-snackbar.png)
+![screenshot-moreactions](screenshots/screenshot-moreactions.png)
