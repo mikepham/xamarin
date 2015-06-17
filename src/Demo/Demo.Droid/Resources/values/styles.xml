@@ -11,4 +11,6 @@
     <item name="spinBars">true</item>
     <item name="color">@android:color/white</item>
   </style>
+
+  <item name="colorAccent" type="color">@color/floating_action_button_color</item>
 </resources>

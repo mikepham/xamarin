@@ -84,6 +84,8 @@
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
+    <Compile Include="Renderers\DynamicAttributeSet.cs" />
+    <Compile Include="Renderers\FloatingButtonRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,10 +94,24 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NativeCode.Mobile.AppCompat.Controls\NativeCode.Mobile.AppCompat.Controls.csproj">
+      <Project>{dd957f05-dbdb-43fc-84fc-f9ee70d5061b}</Project>
+      <Name>NativeCode.Mobile.AppCompat.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NativeCode.Mobile.AppCompat\NativeCode.Mobile.AppCompat.csproj">
       <Project>{09452688-b99e-4c70-b6b2-86077a663f64}</Project>
       <Name>NativeCode.Mobile.AppCompat</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fab_normal.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fab_mini.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
