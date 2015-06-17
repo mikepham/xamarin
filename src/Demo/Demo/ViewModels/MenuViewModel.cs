@@ -12,8 +12,12 @@
     {
         public MenuViewModel()
         {
-            this.HomeCommand = new Command(() => App.ChangeDetailPage(new MainView()));
+            this.HomeCommand = new Command(async () => await App.Navigation.PopToRootAsync());
             this.HomeText = "Home";
+
+            this.LoremIpsumCommand = new Command(async () => await App.Navigation.PushAsync(new LoremIpsumView()));
+            this.LoremIpsumText = "Lorem Ipsum";
+
             this.Title = "Menu";
         }
 
@@ -21,5 +25,10 @@
         public ICommand HomeCommand { get; private set; }
 
         public string HomeText { get; set; }
+
+        [DoNotNotify]
+        public ICommand LoremIpsumCommand { get; private set; }
+
+        public string LoremIpsumText { get; set; }
     }
 }

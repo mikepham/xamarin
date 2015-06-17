@@ -718,6 +718,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.abc_shareactionprovider_share_with_application = global::Demo.Droid.Resource.String.abc_shareactionprovider_share_with_application;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.abc_toolbar_collapse_description = global::Demo.Droid.Resource.String.abc_toolbar_collapse_description;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.appbar_scrolling_view_behavior = global::Demo.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.navigation_drawer_close = global::Demo.Droid.Resource.String.navigation_drawer_close;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.navigation_drawer_open = global::Demo.Droid.Resource.String.navigation_drawer_open;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.status_bar_notification_info_overflow = global::Demo.Droid.Resource.String.status_bar_notification_info_overflow;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AlertDialog_AppCompat = global::Demo.Droid.Resource.Style.AlertDialog_AppCompat;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AlertDialog_AppCompat_Light = global::Demo.Droid.Resource.Style.AlertDialog_AppCompat_Light;
@@ -3615,6 +3617,12 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050012
 			public const int appbar_scrolling_view_behavior = 2131034130;
 			
+			// aapt resource value: 0x7f050015
+			public const int navigation_drawer_close = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int navigation_drawer_open = 2131034134;
+			
 			// aapt resource value: 0x7f050011
 			public const int status_bar_notification_info_overflow = 2131034129;
 			
@@ -4047,9 +4055,6 @@ namespace Demo.Droid
 			
 			// aapt resource value: 0x7f070125
 			public const int Base_Widget_Design_TabLayout = 2131165477;
-			
-			// aapt resource value: 0x7f070135
-			public const int DrawerArrowStyle = 2131165493;
 			
 			// aapt resource value: 0x7f070010
 			public const int Platform_AppCompat = 2131165200;

@@ -4,5 +4,6 @@
              x:Class="Demo.Views.MenuView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
   <StackLayout>
     <Button Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
+    <Button Command="{Binding LoremIpsumCommand}" Text="{Binding LoremIpsumText}" />
   </StackLayout>
 </ContentPage>

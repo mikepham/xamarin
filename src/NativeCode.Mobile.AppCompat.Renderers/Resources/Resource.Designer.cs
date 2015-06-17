@@ -2220,6 +2220,12 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f050012
 			public static int appbar_scrolling_view_behavior = 2131034130;
 			
+			// aapt resource value: 0x7f050015
+			public static int navigation_drawer_close = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public static int navigation_drawer_open = 2131034134;
+			
 			// aapt resource value: 0x7f050011
 			public static int status_bar_notification_info_overflow = 2131034129;
 			

@@ -22,7 +22,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
     /// Provides a <see cref="AppCompatDelegate"/>-backed activity while maintaining compatibility with $Xamarin.Forms$.
     /// </summary>
     /// <remarks>See <see cref="http://bit.ly/1Lfr30c"/> for information on implementation.</remarks>
-    public class AppCompatFormsApplicationActivity : FormsApplicationActivity, IAppCompatCallback, IAppCompatDelegateProvider
+    public class AppCompatFormsApplicationActivity : FormsApplicationActivity,
+                                                     ActionBarDrawerToggle.IDelegateProvider,
+                                                     IAppCompatCallback,
+                                                     IAppCompatDelegateProvider
     {
         /// <summary>
         /// Standard compatibility theme.
@@ -70,6 +73,14 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         public AppCompatDelegate AppCompatDelegate
         {
             get { return this.appCompatDelegate ?? this.disposables.Add(this.appCompatDelegate = AppCompatDelegate.Create(this, this)); }
+        }
+
+        /// <summary>
+        /// Gets the drawer toggle delegate.
+        /// </summary>
+        public ActionBarDrawerToggle.IDelegate DrawerToggleDelegate
+        {
+            get { return this.AppCompatDelegate.DrawerToggleDelegate; }
         }
 
         /// <summary>
