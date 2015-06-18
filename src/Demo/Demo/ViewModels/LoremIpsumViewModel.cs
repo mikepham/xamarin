@@ -18,6 +18,7 @@
         {
             this.AddTextCommand = new Command(this.ExecuteAddText);
             this.Text = this.GetResourceText();
+            this.Title = "More Lorem Ipsum?";
         }
 
         [DoNotNotify]
