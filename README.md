@@ -5,8 +5,7 @@ Provide Material Design themes now for Xamarin.Forms apps natively without hacks
 [![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1)
 [![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_continuous.svg?style=flat-square&label=continuous)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_continuous&guest=1)
 
-## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/) 
-[![AppCompat](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.svg?style=flat-square&label=AppCompat)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/)
+## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/) [![AppCompat](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.svg?style=flat-square&label=AppCompat)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/)
 
 Simply install the NuGet package into your Android project.
 
@@ -32,8 +31,7 @@ public class MainActivity : AppCompatFormsApplicationActivity
 
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
 
-## [AppCompat Controls](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
-[![AppCompat.Controls](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.Controls.svg?style=flat-square&label=AppCompat.Controls)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
+## [AppCompat Controls](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/) [![AppCompat.Controls](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.Controls.svg?style=flat-square&label=AppCompat.Controls)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
 
 Simply install the NuGet package into your PCL project that contains your UI.
 NOTE: You must install the Renderers package into your Android project.
@@ -44,8 +42,7 @@ NOTE: You must install the Renderers package into your Android project.
 - FloatingButton ([FloatingActionButton](https://developer.android.com/reference/android/support/design/widget/FloatingActionButton.html))
 - IUserNotifier ([Snackbar](https://developer.android.com/reference/android/support/design/widget/Snackbar.html))
 
-## [AppCompat Renderers](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
-[![AppCompat.Renderers](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.Renderers.svg?style=flat-square&label=AppCompat.Renderers)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
+## [AppCompat Renderers](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/) [![AppCompat.Renderers](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.Renderers.svg?style=flat-square&label=AppCompat.Renderers)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
 
 Simply install the NuGet package into your Android project.
 
