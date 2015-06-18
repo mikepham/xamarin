@@ -1,5 +1,6 @@
-# xamarin
-Provides various libraries for making Xamarin.Forms development easier. Check out the [wiki](https://github.com/mikepham/xamarin/wiki) for more information.
+# Power to the people, Cos!
+
+Provide Material Design themes now for Xamarin.Forms apps natively without hacks! Check out the [wiki](https://github.com/mikepham/xamarin/wiki) for more information.
 
 [![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1)
 [![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_continuous.svg?style=flat-square&label=continuous)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_continuous&guest=1)
