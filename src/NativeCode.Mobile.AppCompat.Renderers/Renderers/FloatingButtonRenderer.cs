@@ -24,12 +24,11 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
             if (this.Control == null)
             {
-                var control = new FloatingActionButton(this.Context.GetAppCompatThemedContext());
+                var control = this.InflateFloatingActionButton();
                 this.SetNativeControl(control);
 
                 this.SetupClickable(this.Control, this.Element.Command, this.Element.CommandParameter);
 
-                this.UpdateBackgroundColor();
                 this.UpdateColor();
                 this.UpdateIcon();
             }
@@ -39,11 +38,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == FloatingButton.ButtonSizeProperty.PropertyName)
-            {
-                // TODO: Need to figure out how to change the button size besides from XML.
-            }
-            else if (e.PropertyName == FloatingButton.ColorProperty.PropertyName)
+            if (e.PropertyName == FloatingButton.ColorProperty.PropertyName)
             {
                 this.UpdateColor();
             }
@@ -51,6 +46,16 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             {
                 this.UpdateIcon();
             }
+        }
+
+        private FloatingActionButton InflateFloatingActionButton()
+        {
+            if (this.Element.ButtonSize == FloatingButtonSize.Mini)
+            {
+                return this.InflateNativeControl<FloatingActionButton>(Resource.Layout.fab_mini);
+            }
+
+            return this.InflateNativeControl<FloatingActionButton>(Resource.Layout.fab_normal);
         }
 
         private void UpdateColor()

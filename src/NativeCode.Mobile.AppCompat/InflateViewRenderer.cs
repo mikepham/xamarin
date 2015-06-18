@@ -5,6 +5,7 @@ namespace NativeCode.Mobile.AppCompat
     using System.Windows.Input;
 
     using Android.App;
+    using Android.Support.Design.Widget;
     using Android.Views;
 
     using NativeCode.Mobile.AppCompat.EventListeners;
@@ -115,15 +116,16 @@ namespace NativeCode.Mobile.AppCompat
         /// <param name="group">The group.</param>
         /// <param name="attachToRoot">if set to <c>true</c> [attach to root].</param>
         /// <returns>Returns a casted <see cref="View" />.</returns>
-        /// <exception cref="System.InvalidCastException">Could not cast the View to a  + typeof(TNativeView).Name + .</exception>
+        /// <exception cref="System.InvalidCastException">Could not cast the view {0} to a {1}.</exception>
         protected T InflateNativeControl<T>(int id, ViewGroup @group = null, bool attachToRoot = false) where T : Android.Views.View
         {
-            var view = this.LayoutInflater.Inflate(id, @group, attachToRoot);
+            var inflated = this.LayoutInflater.Inflate(id, @group, attachToRoot);
+            var view = inflated.FindViewById<FloatingActionButton>(inflated.Id);
             var native = view as T;
 
             if (native == null)
             {
-                throw new InvalidCastException("Could not cast the View to a " + typeof(TNativeView).Name + ".");
+                throw new InvalidCastException(string.Format("Could not cast the view {0} to a {1}.", view.GetType().Name, typeof(T).Name));
             }
 
             return native;
