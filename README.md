@@ -1,9 +1,9 @@
 # xamarin
 Provides various libraries for making Xamarin.Forms development easier. Check out the [wiki](https://github.com/mikepham/xamarin/wiki) for more information.
 
-![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat&label=release) ![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_continuous.svg?style=flat&label=continuous)
+![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release) ![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_continuous.svg?style=flat-square&label=continuous)
 
-## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/)
+## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/) ![AppCompat](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.svg)
 Simply install the NuGet package into your Android project.
 
 `Install-Package NativeCode.Mobile.AppCompat`
