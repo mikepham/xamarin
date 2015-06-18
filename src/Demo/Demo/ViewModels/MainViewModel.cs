@@ -2,6 +2,7 @@
 {
     using System.Windows.Input;
 
+    using NativeCode.Mobile.AppCompat.Controls;
     using NativeCode.Mobile.AppCompat.Controls.Platforms;
 
     using PropertyChanged;
@@ -30,13 +31,12 @@
 
         private void HandleFloatingButtonCommand()
         {
-            this.Title = string.Format("Clicked {0} times.", ++this.counter);
         }
 
         private void HandleShowSnackBar()
         {
             var notifier = DependencyService.Get<IUserNotifier>();
-            notifier.NotifyShort("Sample message.");
+            notifier.NotifyShort(string.Format("You hit me {0} times!!!", ++this.counter));
         }
     }
 }

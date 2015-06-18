@@ -11,7 +11,8 @@
     {
         public static readonly BindableProperty ButtonSizeProperty = BindableProperty.Create<FloatingButton, FloatingButtonSize>(
             x => x.ButtonSize,
-            default(FloatingButtonSize));
+            default(FloatingButtonSize),
+            BindingMode.OneWayToSource);
 
         public static readonly BindableProperty ColorProperty = BindableProperty.Create<FloatingButton, Color>(x => x.Color, default(Color));
 

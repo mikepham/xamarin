@@ -2,10 +2,12 @@
 
 <resources>
   <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     <item name="colorAccent">#8BC34A</item>
     <item name="colorPrimary">#03A9F4</item>
     <item name="colorPrimaryDark">#0288D1</item>
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    <item name="windowActionModeOverlay">true</item>
   </style>
 
   <style name="AppTheme" parent="AppTheme.Base">
