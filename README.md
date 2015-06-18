@@ -52,6 +52,22 @@ Simply install the NuGet package into your Android project.
 
 Once installed, you will have to call `AppCompatRenderers.EnableAll` inside your OnCreate, after `Forms.Init` is called. This will register all of the AppCompat renderers to replace existing Xamarin.Forms renderers.
 
+```csharp
+public class MainActivity : AppCompatFormsApplicationActivity
+{
+  protected override void OnCreate(Bundle savedInstanceState)
+  {
+    base.OnCreate(savedInstanceState);
+
+    Forms.Init(this, savedInstanceState);
+    AppCompatRenderers.EnableAll();
+
+    this.LoadApplication(new App());
+  }
+}
+```
+
+
 ### Current Renderers
 - Button ([AppCompatButton](http://developer.android.com/reference/android/support/v7/widget/AppCompatButton.html))
 - Entry ([AppCompatEditText](http://developer.android.com/reference/android/support/v7/widget/AppCompatEditText.html))
