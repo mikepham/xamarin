@@ -18,15 +18,18 @@
 
         private static Page CreateMainPage()
         {
-            return CreateNavigationPage(CreateMasterDetailPage());
+            var master = CreateMasterDetailPage(new MenuView(), new MainView());
+            var navigation = CreateNavigationPage(master);
+
+            return navigation;
         }
 
-        private static MasterDetailPage CreateMasterDetailPage()
+        private static MasterDetailPage CreateMasterDetailPage(Page master, Page detail)
         {
             MasterDetail = new MasterDetailPage
             {
-                Detail = new MainView(),
-                Master = new MenuView(),
+                Detail = detail,
+                Master = master,
                 MasterBehavior = MasterBehavior.Popover,
                 Title = "AppCompat Demo"
             };
